@@ -1,0 +1,9 @@
+<div *ngIf="tweetData">
+    <div class="tweet-list-container" *ngFor="let tweet of tweetData" [ngClass]="{'retweet-list': tweet.reTweetedBy}">
+      <div class="retweeted-by" *ngIf="tweet.reTweetedBy">
+        <b>{{tweet.reTweetedBy}}</b> 
+        <span class="retweeted-text">Retweeted</span>
+      </div>
+      <tweet-item [tweet] = "tweet"/>
+  </div>
+</div>

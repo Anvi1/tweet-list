@@ -1,0 +1,35 @@
+<div class="tweet-filter-container">
+    <div class="filters">
+      <h2>Tweet Filters</h2>
+        <input class="tweet-filter-input" (input)="onFilterInputChange($event)" type="text" placeholder="@nameHandle or name">
+      <div class="show-only">
+        <h3>Show only</h3>
+        <div class="tweet-filter-radio-btn">
+           <input type="radio" id="allTweets" name="filter" value="all" (change)="onSelectFilterChange('all')" checked>
+           <label for="allTweets">All tweets</label>
+        </div>
+        <div class="tweet-filter-radio-btn">
+           <input type="radio" id="reTweets" name="filter" value="retweeted" (change)="onSelectFilterChange('retweeted')">
+           <label for="reTweets">Retweeted tweets</label>
+        </div>        
+      </div>
+      <h3>Number post/page</h3>
+        <div class="number-posts">
+            <label>No. of post per page : </label>
+            <input type="text" [(ngModel)]="postsPerPage" (input)="onNumberOfPostsInputChange($event)">
+        </div>
+
+      <!-- Pagination can be a separate component or handled here -->
+      <div class="pagination-heading">Pages:</div>
+      <nav aria-label="Page navigation" *ngIf="paginationArray">
+        <ul class="pagination">
+          <li *ngFor="let page of pagination(currentPage, paginationArray.length)">
+            <a (click)="onPageChange(page)" [ngClass]="{ 'active': currentPage === page }" *ngIf="page !== '...'">{{ page }}</a>
+            <span *ngIf="page === '...'">{{ page }}</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+  </div>
+  

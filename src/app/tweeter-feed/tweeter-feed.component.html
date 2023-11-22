@@ -1,0 +1,15 @@
+<div class="tweeter-feed-container">
+    <div *ngIf="displayError"> Somee error occured please check your network</div>
+    <div class="tweeter-container" *ngIf="!displayError">
+        <div class="tweet-filter">
+            <tweet-filter [currentPage] = "currentPage" [postsPerPage] = "postsPerPage" [paginationArray] = "paginationArray" (postsPerPageChange)="onPostsPerPageChange($event)" (pageChange)="onPageChange($event)"/>
+        </div>
+        <div class="tweet-list" *ngIf="displayData && displayData.length>0">
+            <tweet-list [tweetData] = "displayData" />
+        </div>
+
+        <div class="tweet-list tweet-list-empty" *ngIf="tweetData && tweetData.length==0">
+            
+        </div>
+    </div>
+</div>

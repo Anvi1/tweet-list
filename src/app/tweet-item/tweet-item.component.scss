@@ -1,0 +1,63 @@
+.feed-container {
+    font-family: Arial, sans-serif;
+}
+ 
+.tweet {
+   padding: 20px;
+   background-color: #f9f9f9;
+}
+ 
+.tweet-container {
+   font-weight: bold;
+   display: flex;
+   column-gap: 10px;
+   flex-direction: column;
+}
+
+.tweet-header-container {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   column-gap: 20px;
+}
+ 
+.tweet-content {
+   // width: 30rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.tweet-header {
+   display: flex;
+   column-gap: 7px;
+   align-items: center;
+}
+
+.tweet-text {
+   font-weight: 100;
+   margin-top: 1rem;
+}
+ 
+.tweet-link {
+   color: #1DA1F2;
+   text-decoration: none;
+}
+
+.retweet {
+   border-radius: 8px;
+}
+
+.profile-image-div{
+   background-color: #3498db; /* Circle background color */
+   border-radius: 50%; /* Makes it a circle */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.profile-image{
+   max-width: 100%; /* Ensure the image doesn't exceed the circle's dimensions */
+   max-height: 100%; /* Ensure the image doesn't exceed the circle's dimensions */
+   border-radius: 50%; /* Make the image fit the circle shape */
+}

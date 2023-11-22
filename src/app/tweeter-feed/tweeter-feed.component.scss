@@ -1,0 +1,44 @@
+.tweeter-feed-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.tweeter-container{
+  display: flex;
+  column-gap: 20px;
+  flex-direction: row;
+}
+
+.tweet-filter {
+  background-color: white;
+  height: 26rem;
+  padding: 20px;
+
+}
+
+.tweet-list{
+  background: #e8f0f8;
+  border: 1px solid #a9c4da;
+  border-radius: 6px;
+  height: auto;
+  max-height: 35rem;
+  overflow-y: auto;
+}
+
+.tweet-list-empty{
+  width: 25rem;
+}
+
+/* Media query for larger screens */
+@media screen and (max-width: 657px) {
+  .tweeter-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tweet-filter {
+    margin-bottom: 10%
+  }
+}

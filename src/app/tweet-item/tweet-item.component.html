@@ -1,0 +1,23 @@
+<div class="tweet" [ngClass]="{'retweet': tweet.reTweetedBy}">
+    <div class="tweet-container">
+        <div class="tweet-header-container">
+            <div class="profile-image-container">
+                <div class="profile-image-div">
+                    <img [src]="tweet.userProfileImg" class="profile-image">
+                </div>
+            </div>
+            <div class="tweet-header">
+                <div>{{ tweet.userName }}</div>
+                <div><a href="{{tweet.userUrl}}" target="_blank" class="tweet-link">({{ tweet.userHandler }})</a></div>
+            </div>    
+        </div>
+          
+        <div class="tweet-content">
+            <div class="tweet-text">
+                {{tweet.tweetText}}
+            </div>
+        </div>  
+        
+    </div>
+</div> 
+
